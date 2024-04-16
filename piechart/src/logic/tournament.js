@@ -25,6 +25,7 @@
         initPiechart('#tournament_piechart', total);
         for (const [archetypeName, archetypeImg, quantity] of archetypes) {
             const s = renderPieSlice('#tournament_piechart', archetypeName, 'url(https://images.ygoprodeck.com/images/cards_cropped/' + archetypeImg + '.jpg)', quantity);
+            // const s = renderPieSlice('#tournament_piechart', archetypeName, 'url(http://localhost:63342/TournamentPieChart/piechart/src/img/' + archetypeImg + '.jpg)', quantity);
             if (archetypeImg === UNKNOWN_IMAGE) s.addClass('slice-other');
         }
     });
@@ -34,7 +35,4 @@
         });
     });
     renderPieChart();
-    document.getElementById('tournament_expand_btn').addEventListener('click', () => {
-        document.getElementById('tournament_overview').classList.remove('collapsed');
-    });
 })();

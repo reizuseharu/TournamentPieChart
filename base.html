@@ -14,6 +14,7 @@
 <body class="d-flex flex-column h-100 dark-scheme">
 <link rel="stylesheet" type="text/css" href="piechart/src/css/tournament.css">
 <script type="text/javascript" defer="defer" src="piechart/src/logic/tournament.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
 
 
@@ -74,6 +75,8 @@ Yu-Gi-Oh! Tournament Pie Chart <small class="d-block text-muted ml-1 mt-2">[inse
 <span class="as-tablecell" role="gridcell">2</span>
 </div>
 </div>
+<input download="download.png" id="btn-Preview-Image" type="button" value="Download" />
+<br/>
 <div id="tournament_piechart" class="piechart-container"></div>
 </div>
 </div>
@@ -82,10 +85,32 @@ Yu-Gi-Oh! Tournament Pie Chart <small class="d-block text-muted ml-1 mt-2">[inse
 
 
 <script type="text/javascript" src="piechart/src/js/jquery-3.7.0.min.js"></script>
-<script src="piechart/src/js/bootstrap.bundle.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="piechart/src/js/jquery.lazy.min.js"></script>
 <script type="text/javascript" defer="defer" src="piechart/src/js/jquery.mark.min.js"></script>
 <script type="text/javascript" src="piechart/src/js/jquery.canvasjs.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        var element = $("#tournament_piechart"); // global variable
+        var getCanvas; // global variable
+        var newData;
+
+        $("#btn-Preview-Image").on('click', function() {
+            html2canvas(element[0], {
+                backgroundColor: null
+            }).then(
+                function(canvas) {
+                    getCanvas = canvas;
+                    var imageData = getCanvas.toDataURL("image/png");
+                    var a = document.createElement("a");
+                    a.href = imageData; //Image Base64 Goes here
+                    a.download = "PieChart.png"; //File name Here
+                    a.click(); //Downloaded file
+                }
+            );
+        });
+    });
+</script>
 
 </body>
 </html>
