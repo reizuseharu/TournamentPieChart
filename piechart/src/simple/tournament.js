@@ -61,7 +61,9 @@ const ARCHETYPE_TO_CODE = {
     "Drytron": "97148796",
     "Cyber Dragon": "10443957",
     "Cydra": "10443957",
-    "HERO": "60461804"
+    "HERO": "60461804",
+    "Exosister": "59242457",
+    "Exo": "59242457"
 };
 
 (() => {
