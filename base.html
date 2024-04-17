@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" class="h-100" data-bs-theme="dark"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="2024-03-30 - YCS Medellin - Yu-Gi-Oh! Tournament Results and Decklists - YGOPRODeck">
-<link rel="icon" href="https://images.ygoprodeck.com/images/assets/cropped-applogo_high-1-32x32.png" sizes="32x32">
-<link rel="icon" href="https://images.ygoprodeck.com/images/assets/cropped-applogo_high-1-192x192.png" sizes="192x192">
-<title>Yu-Gi-Oh! Tournament Pie Chart</title>
+<html lang="en" class="h-100" data-bs-theme="dark">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+          content="2024-03-30 - YCS Medellin - Yu-Gi-Oh! Tournament Results and Decklists - YGOPRODeck">
+    <link rel="icon" href="https://images.ygoprodeck.com/images/assets/cropped-applogo_high-1-32x32.png" sizes="32x32">
+    <link rel="icon" href="https://images.ygoprodeck.com/images/assets/cropped-applogo_high-1-192x192.png"
+          sizes="192x192">
+    <title>Yu-Gi-Oh! Tournament Pie Chart</title>
 
-<script type="text/javascript" defer="defer" src="piechart/src/logic/render.js"></script>
-<link rel="stylesheet" href="piechart/src/css/YGOPRODeck.css">
+    <script type="text/javascript" defer="defer" src="piechart/src/logic/render.js"></script>
+    <link rel="stylesheet" href="piechart/src/css/YGOPRODeck.css">
 </head>
 <body class="d-flex flex-column h-100 dark-scheme">
 <link rel="stylesheet" type="text/css" href="piechart/src/css/tournament.css">
@@ -19,68 +22,69 @@
 
 
 <main role="main" class="flex-shrink-0">
-<div class="container">
+    <div class="container">
 
-<div class="info-area mb-5">
-<h1 class="mt-5">
-Yu-Gi-Oh! Tournament Pie Chart <small class="d-block text-muted ml-1 mt-2">[insert name of tournament here]</small>
-</h1>
-<p>Results and decklists from the YCS Battle City Yu-Gi-Oh! tournament.</p>
+        <div class="info-area mb-5">
+            <h1 class="mt-5">
+                Yu-Gi-Oh! Tournament Pie Chart <small class="d-block text-muted ml-1 mt-2">[insert name of tournament
+                here]</small>
+            </h1>
+            <p>Results and decklists from the YCS Battle City Yu-Gi-Oh! tournament.</p>
 
-<div id="tournament_overview" class="collapsed">
-<div id="tournament_archetypes" class="as-table" role="grid">
-<div id="tournament_archetypes_header" class="as-tablerow" role="row">
-<span class="as-tablecell" role="columnheader"></span>
-<span class="as-tablecell" role="columnheader">Winner</span>
-<span class="as-tablecell" role="columnheader">Top 2</span>
-<span class="as-tablecell" role="columnheader">Top 4</span>
-<span class="as-tablecell" role="columnheader">Top 8</span>
-<span class="as-tablecell" role="columnheader">Top 16</span>
-<span class="as-tablecell" role="columnheader">Top 32</span>
-</div>
-<div class="tournament_archetypes_row as-tablerow odd" role="row" data-archetype-img="9674034">
-<span class="as-tablecell" role="gridcell"><b>Snake-Eye</b></span>
-<span class="as-tablecell" role="gridcell">1</span>
-<span class="as-tablecell" role="gridcell">1</span>
-<span class="as-tablecell" role="gridcell">2</span>
-<span class="as-tablecell" role="gridcell">4</span>
-<span class="as-tablecell" role="gridcell">6</span>
-<span class="as-tablecell" role="gridcell">10</span>
-</div>
-<div class="tournament_archetypes_row as-tablerow even" role="row" data-archetype-img="55990317">
-<span class="as-tablecell" role="gridcell"><b>Runick</b></span>
-<span class="as-tablecell" role="gridcell"></span>
-<span class="as-tablecell" role="gridcell">1</span>
-<span class="as-tablecell" role="gridcell">1</span>
-<span class="as-tablecell" role="gridcell">1</span>
-<span class="as-tablecell" role="gridcell">1</span>
-<span class="as-tablecell" role="gridcell">1</span>
-</div>
-<div class="tournament_archetypes_row as-tablerow odd" role="row" data-archetype-img="32909498">
-<span class="as-tablecell" role="gridcell"><b>Kashtira</b></span>
-<span class="as-tablecell" role="gridcell"></span>
-<span class="as-tablecell" role="gridcell"></span>
-<span class="as-tablecell" role="gridcell">1</span>
-<span class="as-tablecell" role="gridcell">1</span>
-<span class="as-tablecell" role="gridcell">2</span>
-<span class="as-tablecell" role="gridcell">3</span>
-</div>
-<div class="tournament_archetypes_row as-tablerow even" role="row" data-archetype-img="72272462">
-<span class="as-tablecell" role="gridcell"><b>Despia</b></span>
-<span class="as-tablecell" role="gridcell"></span>
-<span class="as-tablecell" role="gridcell"></span>
-<span class="as-tablecell" role="gridcell"></span>
-<span class="as-tablecell" role="gridcell"></span>
-<span class="as-tablecell" role="gridcell"></span>
-<span class="as-tablecell" role="gridcell">2</span>
-</div>
-</div>
-<input download="download.png" id="btn-Preview-Image" type="button" value="Download" />
-<br/>
-<div id="tournament_piechart" class="piechart-container"></div>
-</div>
-</div>
-</div>
+            <div id="tournament_overview" class="collapsed">
+                <div id="tournament_archetypes" class="as-table" role="grid">
+                    <div id="tournament_archetypes_header" class="as-tablerow" role="row">
+                        <span class="as-tablecell" role="columnheader"></span>
+                        <span class="as-tablecell" role="columnheader">Winner</span>
+                        <span class="as-tablecell" role="columnheader">Top 2</span>
+                        <span class="as-tablecell" role="columnheader">Top 4</span>
+                        <span class="as-tablecell" role="columnheader">Top 8</span>
+                        <span class="as-tablecell" role="columnheader">Top 16</span>
+                        <span class="as-tablecell" role="columnheader">Top 32</span>
+                    </div>
+                    <div class="tournament_archetypes_row as-tablerow odd" role="row" data-archetype-img="9674034">
+                        <span class="as-tablecell" role="gridcell"><b>Snake-Eye</b></span>
+                        <span class="as-tablecell" role="gridcell">1</span>
+                        <span class="as-tablecell" role="gridcell">1</span>
+                        <span class="as-tablecell" role="gridcell">2</span>
+                        <span class="as-tablecell" role="gridcell">4</span>
+                        <span class="as-tablecell" role="gridcell">6</span>
+                        <span class="as-tablecell" role="gridcell">10</span>
+                    </div>
+                    <div class="tournament_archetypes_row as-tablerow even" role="row" data-archetype-img="55990317">
+                        <span class="as-tablecell" role="gridcell"><b>Runick</b></span>
+                        <span class="as-tablecell" role="gridcell"></span>
+                        <span class="as-tablecell" role="gridcell">1</span>
+                        <span class="as-tablecell" role="gridcell">1</span>
+                        <span class="as-tablecell" role="gridcell">1</span>
+                        <span class="as-tablecell" role="gridcell">1</span>
+                        <span class="as-tablecell" role="gridcell">1</span>
+                    </div>
+                    <div class="tournament_archetypes_row as-tablerow odd" role="row" data-archetype-img="32909498">
+                        <span class="as-tablecell" role="gridcell"><b>Kashtira</b></span>
+                        <span class="as-tablecell" role="gridcell"></span>
+                        <span class="as-tablecell" role="gridcell"></span>
+                        <span class="as-tablecell" role="gridcell">1</span>
+                        <span class="as-tablecell" role="gridcell">1</span>
+                        <span class="as-tablecell" role="gridcell">2</span>
+                        <span class="as-tablecell" role="gridcell">3</span>
+                    </div>
+                    <div class="tournament_archetypes_row as-tablerow even" role="row" data-archetype-img="72272462">
+                        <span class="as-tablecell" role="gridcell"><b>Despia</b></span>
+                        <span class="as-tablecell" role="gridcell"></span>
+                        <span class="as-tablecell" role="gridcell"></span>
+                        <span class="as-tablecell" role="gridcell"></span>
+                        <span class="as-tablecell" role="gridcell"></span>
+                        <span class="as-tablecell" role="gridcell"></span>
+                        <span class="as-tablecell" role="gridcell">2</span>
+                    </div>
+                </div>
+                <input download="download.png" id="btn-Preview-Image" type="button" value="Download"/>
+                <br/>
+                <div id="tournament_piechart" class="piechart-container"></div>
+            </div>
+        </div>
+    </div>
 </main>
 
 
@@ -90,16 +94,16 @@ Yu-Gi-Oh! Tournament Pie Chart <small class="d-block text-muted ml-1 mt-2">[inse
 <script type="text/javascript" src="piechart/src/js/jquery.canvasjs.min.js"></script>
 
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         var element = $("#tournament_piechart"); // global variable
         var getCanvas; // global variable
         var newData;
 
-        $("#btn-Preview-Image").on('click', function() {
+        $("#btn-Preview-Image").on('click', function () {
             html2canvas(element[0], {
                 backgroundColor: null
             }).then(
-                function(canvas) {
+                function (canvas) {
                     getCanvas = canvas;
                     var imageData = getCanvas.toDataURL("image/png");
                     var a = document.createElement("a");
